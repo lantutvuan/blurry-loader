@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'sans-serif';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.bg {
+    background: url("img/background.jpg") no-repeat center center/cover;
+    position: absolute;
+    width: 100vw;/*calc(100vw + 60px);*/
+    height: 100vh; /*calc(100vh + 60px);*/
+    z-index: -1;
+    filter:blur(0px);
+    animation-name: blur;  
+    animation-duration: 3s;
+}
+
+.loading-text {
+    font-size: 50px;
+    color: #fff;
+}
+
+@keyframes blur {
+
+    from {
+      filter:blur(30px)
+    }
+  
+    to {
+      filter:blur(0px)
+    }
+  } 
